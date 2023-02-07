@@ -41,7 +41,7 @@ while valid:
 
 
     opponet_choise = random.choice(valid_choises)
-    time.sleep(1)
+    time.sleep(3)
 
     if opponet_choise =="R":
         print("I choose Rock")
