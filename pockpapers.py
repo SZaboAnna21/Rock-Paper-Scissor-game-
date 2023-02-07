@@ -42,7 +42,7 @@ while valid:
 
     opponet_choise = random.choice(valid_choises)
     time.sleep(2)
-    # game
+    # game 2
     if opponet_choise =="R":
         print("I choose Rock")
     elif opponet_choise == "s":
