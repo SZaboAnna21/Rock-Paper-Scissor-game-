@@ -4,6 +4,11 @@ import random
 
 print("Hello this is a Rock Paper Scissors game")
 
+comuter_points = 0
+player_points = 0
+
+
+
 def IsThePlayerReady():
     valid_answer =["yes", "no", "Yes", "No"]
     valid= False
@@ -13,6 +18,7 @@ def IsThePlayerReady():
             print("Please choose form yes or no")
         elif answer == "no" or answer =="No":
             print("thank you for playing! ")
+            print(f"I win: {comuter_points} times \nYou win: {player_points} ")
             exit()
         else:
             valid = True
@@ -42,7 +48,7 @@ while valid:
 
     opponet_choise = random.choice(valid_choises)
     time.sleep(2)
-    # game
+    # game 2
     if opponet_choise =="R":
         print("I choose Rock")
     elif opponet_choise == "s":
@@ -56,13 +62,17 @@ while valid:
         valid= IsThePlayerReady()
     elif player_chiose == "P" and opponet_choise =="S":
         print("Scissors beats Paper, I win")
+        comuter_points +=1
         valid= IsThePlayerReady()
     elif player_chiose == "S" and opponet_choise =="R":
         print("Rock beats Scissors, I win")
+        comuter_points +=1
         valid= IsThePlayerReady()
     elif player_chiose == "R" and opponet_choise =="P":
         print("Paper beats Rock, I win")
+        comuter_points +=1
         valid= IsThePlayerReady()
     else:
         print("You win!!")
+        player_points +=1
         valid= IsThePlayerReady()
